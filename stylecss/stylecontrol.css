@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+/*導覽列背景以及文字顏色*/
+.navbar-clientcolor,.dropdown-menu,.navbar-clientcolor a,.dropdown-menu li>a {
+	background-color: #efb921;
+	border-color: white;
+	color:white;
+}
+/*滑鼠移入導覽列背景以及文字顏色*/
+.nav>li>a:hover,.nav>li>a:focus,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover,.dropdown-menu li>a:hover {
+	background-color:#e6c66e;
+	color:dimgray;
+}
+.navbar-toggle {
+	border-color:white;
+	color:white;
+}
+.navbar-default .navbar-toggle:hover {
+	background-color:#e6c66e;
+}
+.navbar-clientcolor .navbar-toggle .icon-bar{
+	background-color: white;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+.fixtop {
+	position: fixed;
+	top: 50px;
+	background-color: whitesmoke;
+	padding: 10px 20px;
+}
+.item {
+	border:1px solid gray;
+	border-radius: 5px;
+	text-align: center;
+}
+.item:hover {
+	background-color: #efb921;
+}
+.owl-theme a:hover {
+	text-decoration: none;
+	color: white;
+}
+.owl-theme a:focus {
+	text-decoration: none;
+}
+.menuclass {
+	margin-top: 50px;
+}
+.itemlist {
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	padding: 10px 20px;
+}
+.itemlist:hover {
+	background-color: #efb921;
+	color: white;
+}
