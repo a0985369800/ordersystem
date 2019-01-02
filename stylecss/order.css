@@ -5,6 +5,15 @@
 	top: 50px;
 	background-color: whitesmoke;
 	padding: 10px 20px;
+	z-index: 11;
+}
+.fixtop2 {
+	width: 100%;
+	position: fixed;
+	top: 180px;
+	padding: 10px 20px;
+	text-align: right;
+	z-index: 10;
 }
 .item {
 	border:1px solid gray;
@@ -22,7 +31,7 @@
 	text-decoration: none;
 }
 .menuclass {
-	margin-top: 50px;
+	padding-top: 180px;
 }
 .itemlist {
 	border-top: 1px solid silver;

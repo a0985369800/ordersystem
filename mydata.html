@@ -38,11 +38,11 @@
 				<li><a href="order.html"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;&nbsp;我要點餐</a></li>
 				<li><a href="mycart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;&nbsp;我的購物車</a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;我的帳戶
+					<a href="mydata.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;我的帳戶
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="mydata.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
 						<li><a href="orderrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單記錄</a></li>
 						<li><a href="qrcode.html"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示QRcode</a></li>
 						<li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;登出</a></li>
@@ -56,13 +56,34 @@
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
 			<div style="text-align: center">
-				<h3>登入會員卡</h3>
-				<hr/>
-				<p>現在時間：2018/12/26</p>
-				<a href="index2.html"><img src="images/qrcode.jpg" width="250px" alt=""></a>
-				<br/>
+				<h3>我的資料</h3>
 				<hr/>
 			</div>
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">帳號<span style="color:crimson">(不可變更)</span></label>
+					<p>abc@gmail.com</p>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">密碼</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="密碼">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputName">姓名</label>
+					<input type="name" class="form-control" id="exampleInputName" placeholder="姓名">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPhone">電話</label>
+					<input type="name" class="form-control" id="exampleInputPhone" placeholder="手機號碼">
+				</div>
+				<div class="form-group">
+					<label for="adress">地址</label>
+					<textarea class="form-control" rows="1" name="adress"></textarea>
+				</div>
+				<div style="text-align: right">
+					<a href="index.html" type="button" class="btn btn-primary btn-lg" style="padding: 10px 50px">確認儲存</a>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

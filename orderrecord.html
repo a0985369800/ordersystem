@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>點餐系統</title>
+<!-- Bootstrap css-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- Bootstrap js-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--貓頭鷹-->
+<link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+<!--串後台控制css-->
+<link href="stylecss/stylecontrol.css" rel="stylesheet" type="text/css">
+<!--全局css-->
+<link href="stylecss/styleall.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-clientcolor navbar-fixed-top">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index2.html">
+				<img src="images/logo.png" height="50px" alt="松本鮮奶茶">
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="order.html"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;&nbsp;我要點餐</a></li>
+				<li><a href="mycart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;&nbsp;我的購物車</a></li>
+				<li class="dropdown">
+					<a href="mydata.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;我的帳戶
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="mydata.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
+						<li><a href="orderrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單記錄</a></li>
+						<li><a href="qrcode.html"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示QRcode</a></li>
+						<li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;登出</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+<div class="container" style="margin-top:50px;padding-bottom: 30px">
+	<h3>訂單紀錄</h3>
+	<table class="table table-striped table-hover text-center">
+		<tr>
+			<th class="text-center">項次</th>
+			<th class="text-center">日期</th>
+			<th class="text-center">訂單金額</th>
+			<th class="text-center">明細</th>
+		</tr>
+		<tr>
+			<th class="text-center">1</th>
+			<td>2018年11月25日</td>
+			<td>1750</td>
+			<td>明細&nbsp;<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></td>
+		</tr>
+		<tr>
+			<th class="text-center">2</th>
+			<td>2018年12月2日</td>
+			<td>350</td>
+			<td>明細&nbsp;<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></td>
+		</tr>
+		<tr>
+			<th class="text-center">3</th>
+			<td>2018年12月14日</td>
+			<td>750</td>
+			<td>明細&nbsp;<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></td>
+		</tr>
+		<tr>
+			<th class="text-center">4</th>
+			<td>2018年1月2日</td>
+			<td>250</td>
+			<td>明細&nbsp;<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a></td>
+		</tr>
+	</table>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title itemname" id="myModalLabel">訂單明細 1</h4>
+						<p>訂單日期：2018年11月25日</p>
+					</div>
+					<div class="modal-body">
+						<table class="table table-striped text-center">
+							<tr>
+								<td>項次</td>
+								<td>品名</td>
+								<td>數量</td>
+								<td>單價</td>
+								<td>金額</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>松本鮮奶茶</td>
+								<td>2</td>
+								<td>40</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>多多綠茶</td>
+								<td>5</td>
+								<td>30</td>
+								<td>150</td>
+							</tr>
+							<tr>
+								<td colspan="4">訂單金額總計</td>
+								<td style="color: crimson;font-size: 18px">230</td>
+							</tr>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+					</div>
+				</form>
+			</div><!--modal-content end-->
+		</div><!-- Modal end-->
+	</div><!--row end-->
+</div><!--container end-->
+	
+<footer class="navbar-clientcolor footer navbar-fixed-bottom">
+	<a href="https://www.twroct.com" target="_blank">飲食共和國</a> Copyright © 2018 All rights reserved.
+</footer>
+<!--貓頭鷹-->
+<script src="jquery.min.js"></script>
+<script src="owlcarousel/dist/owl.carousel.min.js"></script>
+<script src="stylejs/maycart.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:3
+				},
+				1000:{
+					items:5
+				}
+			}
+		})
+	});
+</script>
+</body>
+</html>

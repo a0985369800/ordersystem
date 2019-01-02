@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+.carttop {
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	background-color: whitesmoke;
+	padding-top: 10px;
+	text-align: center;
+}
+.cartprogress {
+	color:crimson;
+	padding-bottom: 5px;
+	border-bottom: 3px solid crimson;
+}
+.cartitem {
+	padding:10px 10px;
+}
+.itemprice {
+	color:crimson;
+	font-size: 18px;
+}
+.orderlistpt15 {
+	padding-top: 15px;
+}
+.orderlist {
+	border-bottom: 1px solid silver;
+}
+.payway {
+	background-color: whitesmoke;
+	padding: 10px 10px;
+}
+.radio {
+	padding: 10px 10px;
+}
