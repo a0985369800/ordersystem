@@ -41,14 +41,15 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="order.html"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;&nbsp;我要點餐</a></li>
 				<li><a href="mycart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;&nbsp;我的購物車</a></li>
+				<li><a href="orderrecord.html"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;&nbsp;訂單狀態</a></li>
 				<li class="dropdown">
 					<a href="mydata.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;我的帳戶
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="mydata.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
-						<li><a href="orderrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單記錄</a></li>
-						<li><a href="qrcode.html"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示QRcode</a></li>
+						<li><a href="qrcode.html"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示條碼</a></li>
+						<li><a href="pastrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單紀錄</a></li>
 						<li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;登出</a></li>
 					</ul>
 				</li>
@@ -253,13 +254,7 @@
 		<div class="radio">
 			<label>
 				<input type="radio" name="payway" id="payway2" value="payway2">
-				信用卡一次付清
-			</label>
-		</div>
-		<div class="radio">
-			<label>
-				<input type="radio" name="payway" id="payway3" value="payway3">
-				ATM付款
+				到店取
 			</label>
 		</div>
 	</div>
@@ -288,6 +283,9 @@
 	-->
 	<h3>接收人資料填寫</h3>
 	<div>
+		
+	</div>
+	<div>
 		<div class="radio">
 			<label>
 				<input type="radio" name="receive" id="receive1" value="receive1" checked>
@@ -303,12 +301,37 @@
 	</div>
 	<form>
 		<div class="form-group">
+			<label for="exampleInputPhone">訂購人電話</label>
+			<input type="name" class="form-control" id="exampleInputorder" placeholder="訂購人手機號碼">
+			<p>訂購資料電話加驗證，到店取不用手機簡訊，按下驗證後，會發送簡訊至您手機，請在以下輸入您手機接收到的驗證號碼</p>
+			<div style="text-align: right;margin-top: 5px;">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">前往驗證電話</button>
+				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					<div class="modal-dialog modal-sm" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="gridSystemModalLabel">請在下方輸入手機簡訊驗證碼</h4>
+							</div>
+							<div class="modal-body">
+								<input type="number" class="form-control" id="exampleInputPhonenumber" placeholder="驗證碼">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-primary">送出驗證</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
 			<label for="exampleInputName">接收人姓名</label>
 			<input type="name" class="form-control" id="exampleInputName" placeholder="姓名">
 		</div>
 		<div class="form-group">
 			<label for="exampleInputPhone">接收人電話</label>
-			<input type="name" class="form-control" id="exampleInputPhone" placeholder="手機號碼">
+			<input type="name" class="form-control" id="exampleInputPhone" placeholder="接收人手機號碼">
 		</div>
 		<div class="form-group">
 		</div>

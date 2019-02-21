@@ -12,6 +12,7 @@
 <link href="stylecss/stylecontrol.css" rel="stylesheet" type="text/css">
 <!--全局佈局-->
 <link href="stylecss/styleall.css" rel="stylesheet" type="text/css">
+<link href="stylecss/mydata.css" rel="stylesheet" type="text/css">
 <!-- Bootstrap js-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -37,14 +38,15 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="order.html"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;&nbsp;我要點餐</a></li>
 				<li><a href="mycart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;&nbsp;我的購物車</a></li>
+				<li><a href="orderrecord.html"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;&nbsp;訂單狀態</a></li>
 				<li class="dropdown">
 					<a href="mydata.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;我的帳戶
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
-						<li><a href="orderrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單記錄</a></li>
-						<li><a href="qrcode.html"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示QRcode</a></li>
+						<li><a href="mydata.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
+						<li><a href="qrcode.html"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示條碼</a></li>
+						<li><a href="pastrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單紀錄</a></li>
 						<li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;登出</a></li>
 					</ul>
 				</li>
@@ -61,13 +63,30 @@
 			</div>
 			<form>
 				<div class="form-group">
-					<label for="exampleInputEmail1">帳號<span style="color:crimson">(不可變更)</span></label>
+					<label for="point">我的會員卡號</label>
+					<p>fb-3345678</p>
+				</div>
+				<div class="form-group">
+					<label for="point">目前積分</label>
+					<p>9527</p>
+				</div>
+				<div class="form-group">
+					<label for="point">可用儲值金</label>
+					<p>NT$1,200</p>
+				</div>
+				<div class="form-group">
+					<label for="point">已消費總額</label>
+					<p>NT$3,500&nbsp;&nbsp;<a href="pastrecord.html" type="button" class="btn btn-primary" style="padding: 5px 5px">檢視訂單紀錄</a></p>
+				</div>
+				<div class="form-group">
+					<label for="acount">帳號<span style="color:crimson">(不可變更)</span></label>
 					<p>abc@gmail.com</p>
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">密碼</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="密碼">
 				</div>
+				
 				<div class="form-group">
 					<label for="exampleInputName">姓名</label>
 					<input type="name" class="form-control" id="exampleInputName" placeholder="姓名">
@@ -75,10 +94,44 @@
 				<div class="form-group">
 					<label for="exampleInputPhone">電話</label>
 					<input type="name" class="form-control" id="exampleInputPhone" placeholder="手機號碼">
+					
+					<div style="text-align: right;margin-top: 5px;">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">前往驗證電話</button>
+						<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+							<div class="modal-dialog modal-sm" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="gridSystemModalLabel">請在下方輸入手機簡訊驗證碼</h4>
+									</div>
+									<div class="modal-body">
+										<input type="number" class="form-control" id="exampleInputPhonenumber" placeholder="驗證碼">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+										<button type="button" class="btn btn-primary">送出驗證</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 				<div class="form-group">
-					<label for="adress">地址</label>
+					<label for="email">接收訊息E-mail</label>
+					<p>abc@gmail.com</p>
+				</div>
+				<div class="form-group">
+					<label for="adress">預設地址</label>
 					<textarea class="form-control" rows="1" name="adress"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="adress">地址二</label>
+					<textarea class="form-control" rows="1" name="adress2"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="adress">地址三</label>
+					<textarea class="form-control" rows="1" name="adress3"></textarea>
 				</div>
 				<div style="text-align: right">
 					<a href="index.html" type="button" class="btn btn-primary btn-lg" style="padding: 10px 50px">確認儲存</a>
@@ -87,7 +140,7 @@
 		</div>
 	</div>
 </div>
-<footer class="navbar-clientcolor footer navbar-fixed-bottom">
+<footer class="navbar-clientcolor footer">
 	<a href="https://www.twroct.com" target="_blank">飲食共和國</a> Copyright © 2018 All rights reserved.
 </footer>
 </body>

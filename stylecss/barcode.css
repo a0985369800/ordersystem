@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.barcode {
+	border: 1px solid silver;
+	border-radius: 0px 0px 10px 10px ;
+	padding-bottom: 30px;
+}
+.headbanner {
+	background: -webkit-linear-gradient(#b58d19,#efb921);
+	background: -o-linear-gradient(#b58d19,#efb921);
+	background: -moz-linear-gradient(#b58d19,#efb921);
+	background: linear-gradient(#b58d19,#efb921);
+	text-align: center;
+	padding: 15px 10px;
+	border-radius: 10px 10px 0px 0px ;
+}
+.headbanner img {
+	position: absolute;
+	top: -50px;
+	right: 40% ;
+}
+.modal-body p {font-size: 24px;}
+.warning {
+	font-size: 80px;
+	color: red;
+}
+.modal-title,.modal-body {text-align: center;}

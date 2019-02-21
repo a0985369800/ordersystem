@@ -12,9 +12,7 @@
 <link href="stylecss/stylecontrol.css" rel="stylesheet" type="text/css">
 <!--全局佈局-->
 <link href="stylecss/styleall.css" rel="stylesheet" type="text/css">
-<!-- Bootstrap js-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<link href="stylecss/barcode.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-clientcolor navbar-fixed-top">
@@ -37,14 +35,15 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="order.html"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>&nbsp;&nbsp;我要點餐</a></li>
 				<li><a href="mycart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;&nbsp;我的購物車</a></li>
+				<li><a href="orderrecord.html"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;&nbsp;訂單狀態</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;我的帳戶
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="mydata.html"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;&nbsp;我的資料</a></li>
-						<li><a href="orderrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單記錄</a></li>
-						<li><a href="qrcode.html"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示QRcode</a></li>
+						<li><a href="qrcode.html"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;&nbsp;顯示條碼</a></li>
+						<li><a href="pastrecord.html"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;訂單紀錄</a></li>
 						<li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;登出</a></li>
 					</ul>
 				</li>
@@ -52,22 +51,34 @@
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
-<div class="container" style="margin-top: 80px">
+<div class="container" style="margin-top: 120px">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
-			<div style="text-align: center">
-				<h3>登入會員卡</h3>
-				<hr/>
-				<p>現在時間：2018/12/26</p>
-				<a href="index2.html"><img src="images/qrcode.jpg" width="250px" alt=""></a>
-				<br/>
-				<hr/>
+			<div class="headbanner">
+				<img src="images/unnamed.png" alt="..." class="img-circle" width="80px">
+				<h1 class="h3">周正哲<span style="color:crimson">(超級會員)</span></h1>
+				<p>我的會員卡號：fb-3345678</p>
 			</div>
+			<div class="barcode text-center">
+				<br/>
+				<p>您的會員卡尚未綁訂信箱</p>
+				<img src="images/barcode.jpg" width="250px" alt="">
+				<br/>
+				<p><span style="color:crimson">提醒注意！該碼具有支付功能</span><br/>請勿截圖或將數字告訴他人<br/>慎防詐騙!</p>
+			</div>
+			<p class="text-right"><a href="#">使用優惠劵(目前此功能尚未開啟)</a></p>
 		</div>
 	</div>
 </div>
+
+	
 <footer class="navbar-clientcolor footer navbar-fixed-bottom">
 	<a href="https://www.twroct.com" target="_blank">飲食共和國</a> Copyright © 2018 All rights reserved.
 </footer>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 </html>
